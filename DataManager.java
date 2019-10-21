@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class DataManager {
 
-	Boolean saveLong(String dateFormatted){
+	Boolean saveData(String dateFormatted){
         try {
             File ToFile = new File("ss_mm.txt");
             FileWriter myFileWriter = new FileWriter(ToFile, true);
@@ -45,7 +45,7 @@ public class DataManager {
                 	daSommare = prec;
                     x = (Float.valueOf(line.substring(6))) + daSommare;
                 }
-       			saveLong(Float.toString(x));
+       			saveData(Float.toString(x));
     		}
             br.close();
         } catch (FileNotFoundException e) {
